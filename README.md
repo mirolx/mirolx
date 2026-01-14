@@ -1,5 +1,5 @@
 ## Hi there 👋
-My name is Seungyun Lee and I'm a student in South Korea learning CS and dev
+My name is Seungyun (Erin) Lee and I'm a student in South Korea learning CS and dev
 
 <!--
 **mirolx/mirolx** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
