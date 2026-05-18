@@ -10,7 +10,7 @@ e-commerce operations, AI-assisted content creation, and vibe-coded web services
 
 ## 🛍️ What I'm working on
 - Running **[The Soft Edit Studios](https://www.etsy.com/shop/TheSoftEditStudios)** 
-  — a US-market Etsy shop with 100+ listings (POD model, baby & nursery products)
+  — a US-market Etsy shop with 100+ listings (home decor & nursery products)
 - Building projects that blend code with creative direction
 
 ---
