@@ -32,12 +32,7 @@ e-commerce operations, AI-assisted content creation, and vibe-coded web services
 
 ---
 
-## 📝 Blog
-✍️ [mirolx.tistory.com](https://mirolx.tistory.com)
-
----
-
-*Generalist who bridges tech and creativity.*
+*A girl who loves a lot of things and bridges tech and creativity.*
 
 <!--
 **mirolx/mirolx** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
