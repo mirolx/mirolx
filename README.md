@@ -22,6 +22,7 @@ e-commerce operations, AI-assisted content creation, and vibe-coded web services
 | [RSVP_tracker](https://github.com/mirolx/RSVP_tracker) | RSVP tracking service | TypeScript |
 | [password_generator](https://github.com/mirolx/password_generator) | Password generator tool | TypeScript |
 | [Baekjoon](https://github.com/mirolx/Baekjoon) | Algorithm problem solving | Python |
+| [softeditools.com](https://github.com/mirolx/softeditools.com.git) | A simple set of online tools to use in everyday life | HTML | 
 
 ---
 
