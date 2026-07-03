@@ -22,7 +22,7 @@ e-commerce operations, AI-assisted content creation, and vibe-coded web services
 **E-commerce** · Etsy · Printify · eRank · Everbee  
 **Design & Content** · Kittl · Canva · Figma · AI image tools  
 **Tech** · Python · TypeScript · HTML/CSS · Google Colab · Excel
-
+**AI** · Claude Code · Gemini · Perplexity · ChatGPT · Leonardo AI
 ---
 
 *A girl who loves a lot of things and bridges tech and creativity.*
