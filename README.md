@@ -1,6 +1,6 @@
 # Hi there, I'm Erin (Seungyun) Lee 👋
 
-I'm a Software Engineering student at Yonsei University (Mirae Campus), 
+I'm a Software Majoring student at Yonsei University (Mirae Campus), 
 South Korea — with a creative twist.
 
 I build things at the intersection of **technology and aesthetics**: 
