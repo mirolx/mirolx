@@ -17,12 +17,12 @@ e-commerce operations, AI-assisted content creation, and vibe-coded web services
 | [softeditools.com](https://github.com/mirolx/softeditools.com.git) | A simple set of online tools to use in everyday life | HTML | 
 
 ---
-
 ## 🧰 Skills
-**E-commerce** · Etsy · Printify · eRank · Everbee  
-**Design & Content** · Kittl · Canva · Figma · AI image tools  
-**Tech** · Python · TypeScript · HTML/CSS · Google Colab · Excel
-**AI** · Claude Code · Gemini · Perplexity · ChatGPT · Leonardo AI
+E-commerce: Etsy, Erank, Everbee
+Design & Content: Kittl, Canva, Figma, AI image tools
+Tech: Python, TypeScript, Html/Css, Google Colab, Excel
+AI: Claude Code, Gemini, Perplexity, ChatGPT, Leonardo AI
+
 ---
 
 *A girl who loves a lot of things and bridges tech and creativity.*
