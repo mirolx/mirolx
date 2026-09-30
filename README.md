@@ -11,10 +11,14 @@ e-commerce operations, AI-assisted content creation, and vibe-coded web services
 ## 🔨 Projects
 | Project | Description | Stack |
 |--------|-------------|-------|
+| [content_dashboard](https://github.com/mirolx/content_dashboard) · [Live](https://content-dashboard1.vercel.app) | Content management dashboard | TypeScript |
+| [portfolio-mirolx](https://github.com/mirolx/portfolio-mirolx) · [Live](https://portfolio-mirolx.vercel.app) | Personal portfolio website | HTML |
+| [mockup_generator](https://github.com/mirolx/mockup_generator) | Mockup generation tool for product designs | Python |
+| [softeditools.com](https://github.com/mirolx/softeditools.com) · [Live](https://softeditools.com) | A simple set of online tools to use in everyday life | HTML |
+| [laromerie_app](https://github.com/mirolx/laromerie_app) · [Live](https://laromerie.vercel.app) | Web app for La Romerie | TypeScript |
+| [RSVP_tracker](https://github.com/mirolx/RSVP_tracker) · [Live](https://rvsp-tracker.vercel.app) | RSVP tracking service | TypeScript |
+| [password_generator](https://github.com/mirolx/password_generator) · [Live](https://password-generator-weld-gamma.vercel.app) | Password generator tool | TypeScript |
 | [Yonsei_SarangMoa](https://github.com/mirolx/Yonsei_SarangMoa) | Web service planning & development | HTML |
-| [RSVP_tracker](https://github.com/mirolx/RSVP_tracker) | RSVP tracking service | TypeScript |
-| [password_generator](https://github.com/mirolx/password_generator) | Password generator tool | TypeScript |
-| [softeditools.com](https://github.com/mirolx/softeditools.com.git) | A simple set of online tools to use in everyday life | HTML | 
 
 ---
 ## 📚 Skills
@@ -37,11 +41,13 @@ e-commerce operations, AI-assisted content creation, and vibe-coded web services
 ![Google Drive](https://img.shields.io/badge/Google_Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 
-## 🧰 More Tools
-E-commerce: Etsy, Erank, Everbee
-Design & Content: Kittl, Canva, Figma, AI image tools
-Tech: Python, TypeScript, Html/Css, Google Colab, Excel
-AI: Claude Code, Gemini, Perplexity, ChatGPT, Leonardo AI
+## 🧰 More Skills
+| Category | Skills |
+|----------|--------|
+| **E-commerce** | Etsy, Printify, eRank, Everbee, POD |
+| **Design & Content** | Kittl, Canva, Figma, AI Image Tools |
+| **Tech** | Python, TypeScript, HTML / CSS, Google Colab, Excel, Linux |
+| **AI** | Claude Code, Gemini, Perplexity, ChatGPT, Leonardo AI |
 
 ---
 
