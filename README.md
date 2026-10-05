@@ -11,7 +11,7 @@ e-commerce operations, AI-assisted content creation, and vibe-coded web services
 ## 🔨 Projects
 | Project | Description | Stack |
 |--------|-------------|-------|
-| [content_dashboard](https://github.com/mirolx/content_dashboard) · [Live](https://content-dashboard1.vercel.app) | Content management dashboard | TypeScript |
+| [creator_dashboard](https://github.com/mirolx/content_dashboard) · [Live](https://content-dashboard1.vercel.app) | Content management dashboard | TypeScript |
 | [portfolio-mirolx](https://github.com/mirolx/portfolio-mirolx) · [Live](https://portfolio-mirolx.vercel.app) | Personal portfolio website | HTML |
 | [mockup_generator](https://github.com/mirolx/mockup_generator) | Mockup generation tool for product designs | Python |
 | [softeditools.com](https://github.com/mirolx/softeditools.com) · [Live](https://softeditools.com) | A simple set of online tools to use in everyday life | HTML |
