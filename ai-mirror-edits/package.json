@@ -12,6 +12,7 @@
     "@fontsource/cormorant-garamond": "5.1.0",
     "@fontsource/inter": "5.1.0",
     "@fontsource/jetbrains-mono": "5.1.0",
+    "@fontsource/poppins": "^5.1.0",
     "@remotion/bundler": "4.0.530",
     "@remotion/cli": "4.0.530",
     "@remotion/renderer": "4.0.530",

@@ -61,3 +61,19 @@ npm run render:all      # -> out/DirectionReel.mp4 (annotated) + out/Cut0X-*.mp4
 - Change wording in `src/cuts/C0X*.tsx`. All timings are frame numbers (30 = 1s), so shift them to match your actual VO.
 - Swap Cut 03's mock chat for your real screen recording: replace the chat panel block with `<OffthreadVideo src={staticFile("chat.mp4")} />` and keep the key-line punch-in.
 - Colours and fonts live in `src/theme.ts`.
+
+## Bold variant (second style)
+
+`src/bold/` is a second take on all seven cuts. It's styled after creator-explainer graphics: a cream canvas, bold rounded navy type (Poppins), one mustard accent, white pill callouts and ring counters. The beats and durations match the main set, so you can swap either set into the same timeline slot.
+
+```bash
+node render-all.mjs bold        # -> out/BoldDirectionReel.mp4 + out/Bold0X-*.mp4
+node render-all.mjs everything  # both sets
+```
+
+The motion follows Emil Kowalski's standards (animations.dev):
+- **Entrances:** pills pop in over ~333ms with `cubic-bezier(0.23, 1, 0.32, 1)`, growing from 95% size plus a fade and a 12px rise. Never from zero size.
+- **On-screen moves:** ring draws, the rings pulling apart, and scene swaps use `cubic-bezier(0.77, 0, 0.175, 1)`.
+- **Groups:** stagger 67ms (2 frames).
+- **Selections:** state changes snap in ~170ms, like a tap.
+- **Handles:** each cut fades in and out from the cream background, not from black, to suit the bright look.

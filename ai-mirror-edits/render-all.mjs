@@ -10,7 +10,10 @@ const mode = process.argv[2] ?? "video";
 const serveUrl = await bundle({ entryPoint: path.resolve("src/index.ts") });
 
 if (mode === "stills") {
-  const shots = [
+  const shots = process.argv[3] === "bold" ? [
+    ["Bold01-ColdOpen", [330]], ["Bold02-CaseFile", [370]], ["Bold03-AIMirror", [200, 420]], ["Bold04-Shadow", [330]],
+    ["Bold05-ThreeSelves", [420]], ["Bold06-WhoImNot", [150, 420]], ["Bold07-Reframe", [240, 440]],
+  ] : [
     ["Cut01-ColdOpen", [120, 330]], ["Cut02-CaseFile", [180, 360]], ["Cut03-AIMirror", [280, 450]],
     ["Cut04-Shadow", [330]], ["Cut05-ThreeSelves", [420]], ["Cut06-WhoImNot", [170, 420]], ["Cut07-Reframe", [230, 440]],
   ];
@@ -22,9 +25,10 @@ if (mode === "stills") {
     }
   }
 } else {
-  const ids = mode === "video" ? null : mode.split(",");
+  const ids = ["video", "bold", "everything"].includes(mode) ? null : mode.split(",");
+  const bold = ["BoldDirectionReel", "Bold01-ColdOpen", "Bold02-CaseFile", "Bold03-AIMirror", "Bold04-Shadow", "Bold05-ThreeSelves", "Bold06-WhoImNot", "Bold07-Reframe"];
   const all = ["DirectionReel", "Cut01-ColdOpen", "Cut02-CaseFile", "Cut03-AIMirror", "Cut04-Shadow", "Cut05-ThreeSelves", "Cut06-WhoImNot", "Cut07-Reframe"];
-  for (const id of ids ?? all) {
+  for (const id of mode === "bold" ? bold : mode === "everything" ? [...all, ...bold] : ids ?? all) {
     const composition = await selectComposition({ serveUrl, id, browserExecutable });
     await renderMedia({ composition, serveUrl, codec: "h264", crf: 20, outputLocation: path.resolve(`out/${id}.mp4`), browserExecutable, concurrency: 4 });
     console.log("rendered", id);

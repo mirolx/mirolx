@@ -8,6 +8,7 @@ import { C05ThreeSelves, C05_DURATION } from "./cuts/C05ThreeSelves";
 import { C06WhoImNot, C06_DURATION } from "./cuts/C06WhoImNot";
 import { C07Reframe, C07_DURATION } from "./cuts/C07Reframe";
 import { FPS, H, W } from "./theme";
+import { Bold01, Bold02, Bold03, Bold04, Bold05, Bold06, Bold07 } from "./bold/BoldCuts";
 
 type CutProps = { showDirections?: boolean };
 
@@ -21,15 +22,24 @@ export const CUTS: { id: string; component: React.FC<CutProps>; duration: number
   { id: "Cut07-Reframe", component: C07Reframe, duration: C07_DURATION },
 ];
 
-const Reel: React.FC<CutProps> = ({ showDirections }) => (
+// Second style variant: same beats and durations, so either set drops into the same timeline slots.
+export const BOLD_CUTS = [Bold01, Bold02, Bold03, Bold04, Bold05, Bold06, Bold07].map((component, i) => ({
+  id: CUTS[i].id.replace("Cut", "Bold"),
+  component: component as React.FC<CutProps>,
+  duration: CUTS[i].duration,
+}));
+
+const makeReel = (cuts: typeof CUTS): React.FC<CutProps> => ({ showDirections }) => (
   <Series>
-    {CUTS.map((c) => (
+    {cuts.map((c) => (
       <Series.Sequence key={c.id} durationInFrames={c.duration}>
         <c.component showDirections={showDirections} />
       </Series.Sequence>
     ))}
   </Series>
 );
+const Reel = makeReel(CUTS);
+const BoldReel = makeReel(BOLD_CUTS);
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -42,7 +52,16 @@ export const RemotionRoot: React.FC = () => (
       height={H}
       defaultProps={{ showDirections: true }}
     />
-    {CUTS.map((c) => (
+    <Composition
+      id="BoldDirectionReel"
+      component={BoldReel}
+      durationInFrames={BOLD_CUTS.reduce((s, c) => s + c.duration, 0)}
+      fps={FPS}
+      width={W}
+      height={H}
+      defaultProps={{ showDirections: true }}
+    />
+    {[...CUTS, ...BOLD_CUTS].map((c) => (
       <Composition
         key={c.id}
         id={c.id}
