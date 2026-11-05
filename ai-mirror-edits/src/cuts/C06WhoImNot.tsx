@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { CutFrame, Direction } from "../components/CutFrame";
 import { Words } from "../components/Text";
-import { C, F, inOut, lerp, prog } from "../theme";
+import { C, easeInOut, F, inOut, lerp, prog } from "../theme";
 
 export const C06_DURATION = 450;
 
@@ -23,7 +23,7 @@ export const C06WhoImNot: React.FC<{ showDirections?: boolean }> = ({ showDirect
   const frame = useCurrentFrame();
   const phase1 = 1 - prog(frame, 200, 20);
   const venn = prog(frame, 216, 24);
-  const apart = prog(frame, 290, 60);
+  const apart = prog(frame, 290, 60, easeInOut);
   const sep = lerp(150, 330, apart);
 
   return (
@@ -43,7 +43,7 @@ export const C06WhoImNot: React.FC<{ showDirections?: boolean }> = ({ showDirect
       )}
 
       {frame >= 200 && (
-        <AbsoluteFill style={{ opacity: venn }}>
+        <AbsoluteFill style={{ opacity: venn, transform: `scale(${lerp(0.96, 1, venn)})` }}>
           <svg width={1920} height={1080}>
             <circle cx={960 - sep} cy={470} r={260} fill="rgba(217,179,170,0.10)" stroke={C.roseSoft} strokeWidth={2} />
             <circle cx={960 + sep} cy={470} r={260} fill="rgba(238,232,223,0.06)" stroke={C.paper} strokeWidth={2} />

@@ -2,7 +2,7 @@ import React from "react";
 import { useCurrentFrame } from "remotion";
 import { CutFrame, Direction } from "../components/CutFrame";
 import { Kicker, Words } from "../components/Text";
-import { C, F, inOut, lerp, prog } from "../theme";
+import { C, easeInOut, F, inOut, lerp, prog } from "../theme";
 
 export const C04_DURATION = 390;
 
@@ -25,7 +25,7 @@ const traits = [
 
 export const C04Shadow: React.FC<{ showDirections?: boolean }> = ({ showDirections }) => {
   const frame = useCurrentFrame();
-  const grow = prog(frame, 40, 80);
+  const grow = prog(frame, 40, 80, easeInOut);
   const dx = lerp(0, shadow.x - self.x, grow);
   const dy = lerp(0, shadow.y - self.y, grow);
   const r = lerp(self.r, shadow.r, grow);
@@ -68,7 +68,7 @@ export const C04Shadow: React.FC<{ showDirections?: boolean }> = ({ showDirectio
           I am
         </text>
         {traits.map((tr) => {
-          const p = prog(frame, tr.at, 60);
+          const p = prog(frame, tr.at, 60, easeInOut);
           const x = lerp(tr.from[0], tr.to[0], p);
           const y = lerp(tr.from[1], tr.to[1], p);
           return (

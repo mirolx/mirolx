@@ -26,7 +26,9 @@ export const FPS = 30;
 export const W = 1920;
 export const H = 1080;
 
-const ease = Easing.bezier(0.22, 1, 0.36, 1);
+// Strong curves (animations.dev): ease-out for things entering, ease-in-out for things moving on screen.
+export const ease = Easing.bezier(0.23, 1, 0.32, 1);
+export const easeInOut = Easing.bezier(0.77, 0, 0.175, 1);
 
 /** 0→1 progress between `start` and `start + dur`, eased and clamped. */
 export const prog = (frame: number, start: number, dur: number, easing = ease) =>

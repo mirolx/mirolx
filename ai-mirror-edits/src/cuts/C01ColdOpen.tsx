@@ -1,8 +1,8 @@
 import React from "react";
-import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
+import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { CutFrame, Direction } from "../components/CutFrame";
 import { Kicker, Words } from "../components/Text";
-import { C, F, inOut, lerp, prog } from "../theme";
+import { C, easeInOut, F, inOut, lerp, prog } from "../theme";
 
 export const C01_DURATION = 360;
 
@@ -51,8 +51,8 @@ const MirrorLine: React.FC<{ text: string; y: number; start: number; out: number
 
 export const C01ColdOpen: React.FC<{ showDirections?: boolean }> = ({ showDirections }) => {
   const frame = useCurrentFrame();
-  const seamH = interpolate(frame, [14, 60], [0, 760], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const wipe = prog(frame, 168, 34);
+  const seamH = lerp(0, 760, prog(frame, 14, 40));
+  const wipe = prog(frame, 168, 34, easeInOut);
   const dark = frame < 185;
 
   return (
@@ -96,7 +96,8 @@ export const C01ColdOpen: React.FC<{ showDirections?: boolean }> = ({ showDirect
             style={{
               marginTop: 44,
               height: 1,
-              width: lerp(0, 520, prog(frame, 280, 30)),
+              width: 520,
+              transform: `scaleX(${prog(frame, 280, 30)})`,
               background: C.ink,
               opacity: 0.4,
             }}

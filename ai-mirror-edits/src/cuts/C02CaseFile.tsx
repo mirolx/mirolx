@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { CutFrame, Direction } from "../components/CutFrame";
 import { Kicker, Typed, Words } from "../components/Text";
-import { C, F, inOut, lerp, prog } from "../theme";
+import { C, easeInOut, F, inOut, lerp, prog } from "../theme";
 
 export const C02_DURATION = 390;
 
@@ -23,7 +23,7 @@ const layers = [
 export const C02CaseFile: React.FC<{ showDirections?: boolean }> = ({ showDirections }) => {
   const frame = useCurrentFrame();
   const focus = prog(frame, 200, 24); // dims cards 1–3
-  const circle = prog(frame, 214, 30);
+  const circle = prog(frame, 214, 30, easeInOut);
 
   return (
     <CutFrame bg={C.paper} direction={direction} showDirections={showDirections}>
@@ -60,7 +60,7 @@ export const C02CaseFile: React.FC<{ showDirections?: boolean }> = ({ showDirect
                 background: "#F7F3EC",
                 borderRadius: 6,
                 boxShadow: "0 18px 40px rgba(29,26,23,0.10), 0 2px 6px rgba(29,26,23,0.08)",
-                transform: `translateY(${lerp(80, 0, p)}px) rotate(${lerp(i % 2 ? 3 : -3, i % 2 ? 0.8 : -0.8, p)}deg)`,
+                transform: `translateY(${lerp(40, 0, p)}px) rotate(${lerp(i % 2 ? 3 : -3, i % 2 ? 0.8 : -0.8, p)}deg)`,
                 opacity: p * dim,
               }}
             >

@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { CutFrame, Direction } from "../components/CutFrame";
 import { Kicker, Typed, Words } from "../components/Text";
-import { C, F, inOut, lerp, prog } from "../theme";
+import { C, easeInOut, F, inOut, lerp, prog } from "../theme";
 
 export const C03_DURATION = 480;
 
@@ -23,8 +23,8 @@ const options = [
 export const C03AIMirror: React.FC<{ showDirections?: boolean }> = ({ showDirections }) => {
   const frame = useCurrentFrame();
   const toKey = prog(frame, 300, 34); // chat recedes, key line takes over
-  const pick = prog(frame, 262, 12);
-  const hl = prog(frame, 380, 40);
+  const pick = prog(frame, 262, 5);
+  const hl = prog(frame, 380, 40, easeInOut);
 
   return (
     <CutFrame bg={C.night} dark direction={direction} showDirections={showDirections} pushIn={0.03}>
@@ -54,8 +54,8 @@ export const C03AIMirror: React.FC<{ showDirections?: boolean }> = ({ showDirect
             boxSizing: "border-box",
             fontFamily: F.sans,
             color: C.paper,
-            opacity: prog(frame, 0, 20),
-            transform: `translateY(${lerp(30, 0, prog(frame, 0, 30))}px)`,
+            opacity: prog(frame, 0, 12),
+            transform: `translateY(${lerp(24, 0, prog(frame, 0, 12))}px)`,
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 18, color: "rgba(238,232,223,0.5)", paddingBottom: 22, borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
@@ -88,7 +88,7 @@ export const C03AIMirror: React.FC<{ showDirections?: boolean }> = ({ showDirect
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {options.map((o, i) => {
                 const chosen = i === 1;
-                const p = prog(frame, 200 + i * 7, 14);
+                const p = prog(frame, 200 + i * 2, 10);
                 return (
                   <div
                     key={o}

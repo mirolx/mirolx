@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { CutFrame, Direction } from "../components/CutFrame";
 import { Typed, Words } from "../components/Text";
-import { C, F, inOut, lerp, prog } from "../theme";
+import { C, easeInOut, F, inOut, lerp, prog } from "../theme";
 
 export const C07_DURATION = 480;
 
@@ -16,7 +16,7 @@ const direction: Direction = {
 export const C07Reframe: React.FC<{ showDirections?: boolean }> = ({ showDirections }) => {
   const frame = useCurrentFrame();
   const strike = prog(frame, 76, 18);
-  const lift = prog(frame, 104, 26);
+  const lift = prog(frame, 104, 26, easeInOut);
   const night = prog(frame, 262, 30);
 
   return (
